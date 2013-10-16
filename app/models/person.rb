@@ -5,5 +5,7 @@ class Person < ActiveRecord::Base
   belongs_to :address
   belongs_to :contact
 
+  has_one :person_individual, as: :capacity
+
   validates :capacity_id, :address_id, :contact_id, :status, presence: true
 end
