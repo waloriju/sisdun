@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131016073956) do
+ActiveRecord::Schema.define(version: 20131016075130) do
+
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.string   "state_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cities", ["state_id"], name: "index_cities_on_state_id"
 
   create_table "states", force: true do |t|
     t.string   "abbreviation"
