@@ -1,4 +1,6 @@
 Sisdun::Application.routes.draw do
+  resources :person_entities
+
   resources :person_individuals
 
   resources :people

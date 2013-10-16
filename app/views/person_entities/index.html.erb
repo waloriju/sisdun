@@ -1,0 +1,31 @@
+<h1>Listing person_entities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Trade name</th>
+      <th>Cnpj</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @person_entities.each do |person_entity| %>
+      <tr>
+        <td><%= person_entity.name %></td>
+        <td><%= person_entity.trade_name %></td>
+        <td><%= person_entity.cnpj %></td>
+        <td><%= link_to 'Show', person_entity %></td>
+        <td><%= link_to 'Edit', edit_person_entity_path(person_entity) %></td>
+        <td><%= link_to 'Destroy', person_entity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person entity', new_person_entity_path %>

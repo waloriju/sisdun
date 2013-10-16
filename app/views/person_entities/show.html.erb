@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person_entity.name %>
+</p>
+
+<p>
+  <strong>Trade name:</strong>
+  <%= @person_entity.trade_name %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @person_entity.cnpj %>
+</p>
+
+<%= link_to 'Edit', edit_person_entity_path(@person_entity) %> |
+<%= link_to 'Back', person_entities_path %>
