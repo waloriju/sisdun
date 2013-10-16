@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131016080351) do
+ActiveRecord::Schema.define(version: 20131016091648) do
 
   create_table "addresses", force: true do |t|
     t.string   "address"
@@ -33,6 +33,28 @@ ActiveRecord::Schema.define(version: 20131016080351) do
   end
 
   add_index "cities", ["state_id"], name: "index_cities_on_state_id"
+
+  create_table "contacts", force: true do |t|
+    t.string   "phone1"
+    t.string   "phone2"
+    t.string   "phone3"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "people", force: true do |t|
+    t.string   "status",        default: "ativo"
+    t.integer  "capacity_id"
+    t.string   "capacity_type"
+    t.integer  "address_id"
+    t.integer  "contact_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "people", ["address_id"], name: "index_people_on_address_id"
+  add_index "people", ["contact_id"], name: "index_people_on_contact_id"
 
   create_table "states", force: true do |t|
     t.string   "abbreviation"

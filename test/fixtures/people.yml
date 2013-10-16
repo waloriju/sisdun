@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  status: false
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  address_id: 
+  contact_id: 
+
+two:
+  status: false
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  person: 
+  address_id: 
+  contact_id: 
